@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100d0b">
+<title>Для Вероники ♡</title>
+<style>
+:root{--gold:#d8bd91;--cream:#f5eadb;--muted:#b7a18c;--bg:#100d0b}
+*{box-sizing:border-box}
+html{min-height:100%;background:var(--bg)}
+body{margin:0;min-height:100vh;color:var(--cream);font-family:Georgia,"Times New Roman",serif;background:
+radial-gradient(ellipse at 12% 20%,rgba(116,65,37,.27),transparent 37%),
+radial-gradient(ellipse at 88% 72%,rgba(76,51,41,.28),transparent 34%),
+linear-gradient(135deg,#100d0b,#19120f 52%,#0b0908);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative}
+.card{width:min(690px,100%);padding:clamp(30px,7vw,66px) clamp(23px,7vw,72px);text-align:center;border:1px solid rgba(216,189,145,.42);outline:1px solid rgba(216,189,145,.12);outline-offset:8px;background:linear-gradient(145deg,rgba(24,17,13,.88),rgba(12,10,9,.93));box-shadow:0 30px 100px #0009;position:relative;overflow:hidden}
+.card:before,.card:after{content:"✦";position:absolute;color:var(--gold);opacity:.55;font-size:13px}
+.card:before{top:20px;left:22px}.card:after{bottom:20px;right:22px}
+.monogram{font-size:34px;color:var(--gold);letter-spacing:8px;margin-bottom:9px}
+.rule{width:78px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px auto 30px}
+.eyebrow{font:10px/1.5 Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(31px,7vw,46px);font-weight:normal;line-height:1.18;margin:0 0 22px}
+p{font-size:clamp(16px,3.7vw,19px);line-height:1.85;margin:0 auto 17px;color:#e7d9c9}
+.gold{color:var(--gold)}
+.heart{font-size:29px;color:var(--gold);margin:23px 0 20px;animation:pulse 2.2s ease-in-out infinite}
+button{font-family:Georgia,serif;color:var(--cream);font-size:15px;letter-spacing:1px;padding:14px 27px;background:transparent;border:1px solid var(--gold);cursor:pointer;transition:.25s}
+button:hover{background:rgba(216,189,145,.12);transform:translateY(-2px)}
+.small{font-size:13px;color:var(--muted);font-style:italic;line-height:1.6}
+.date{position:absolute;bottom:18px;right:22px;font-size:12px;color:#8c7867;letter-spacing:1px}
+.envelope{font-size:42px;margin:20px auto;color:var(--gold);animation:float 3s ease-in-out infinite}
+.hidden{display:none}
+.letter{animation:appear .9s ease both}
+footer{position:absolute;bottom:19px;left:22px;color:#7d6959;font-size:12px;font-style:italic;max-width:150px;line-height:1.5}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(max-width:520px){.wrap{padding:25px 17px 55px}.card{padding:36px 23px}.date{right:14px;bottom:8px}footer{left:14px;bottom:8px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="card" aria-live="polite">
+    <div class="monogram">V <span style="font-size:17px">♡</span> A</div>
+    <div class="rule"></div>
+    <div id="intro">
+      <div class="eyebrow">маленькое письмо только для тебя</div>
+      <div class="envelope">✉</div>
+      <h1>Вероника, это тебе</h1>
+      <p>Здесь нет повода и особенной даты.<br>Мне просто захотелось сделать для тебя<br>что-то маленькое, но своё.</p>
+      <button id="openBtn">Открыть письмо ♡</button>
+      <p class="small" style="margin-top:23px">Открой, когда у тебя будет минутка спокойствия.</p>
+    </div>
+    <div id="letter" class="letter hidden">
+      <div class="eyebrow">несколько слов от меня</div>
+      <h1>Вероника <span class="gold">♡</span></h1>
+      <p>Я не всегда умею красиво говорить о чувствах, поэтому решил оставить их здесь.</p>
+      <p>Мне нравится узнавать тебя, смеяться с тобой и собирать наши маленькие моменты. Иногда самые важные вещи — это просто разговор, прогулка или то, как рядом с человеком становится тепло.</p>
+      <p>Я не обещаю быть идеальным. Но хочу быть человеком, рядом с которым тебе спокойно, уютно и можно оставаться собой.</p>
+      <p class="gold">Спасибо, что ты есть.</p>
+      <p>Ты — моё очень красивое «случайно».</p>
+      <div class="heart">♡</div>
+      <p class="small">Обнимаю тебя.<br>Твой Захар</p>
+      <button id="backBtn">Прочитать ещё раз</button>
+    </div>
+  </section>
+</main>
+<footer>Некоторые люди делают мир чуточку теплее…</footer>
+<div class="date">ДЛЯ ТЕБЯ · ♡</div>
+<script>
+const intro=document.getElementById('intro'), letter=document.getElementById('letter');
+document.getElementById('openBtn').addEventListener('click',()=>{intro.classList.add('hidden');letter.classList.remove('hidden');});
+document.getElementById('backBtn').addEventListener('click',()=>{letter.classList.add('hidden');intro.classList.remove('hidden');});
+</script>
+</body>
+</html>
